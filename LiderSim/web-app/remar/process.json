@@ -18,6 +18,21 @@
           "path": ""
         }
       ]
+    },
+    {
+      "name": "Projetos",
+      "uri": "projeto",
+      "optional": true,
+      "description": "Escrever projetos como objetivos do jogo.",
+      "type": "json",
+      "dependencies": null,
+      "outputs": [
+        {
+          "name": "projetos.json",
+          "type": "json",
+          "path": ""
+        }
+      ]
     }
   ],
   "outputs": [

@@ -9,12 +9,5 @@ class UrlMappings {
 
         "/"(view:"/index")
         "500"(view:'/error')
-
-        // Resource API
-        "/composto/getNomeComposto/$id"(controller: "composto", action: "getNomeComposto")
-        "/composto/getFormulaComposto/$id"(controller: "composto", action: "getFormulaComposto")
-        "/composto/getTipoComposto/$id"(controller: "composto", action: "getTipoComposto")
-
-        "/desafio/export/$id"(controller: "desafio", action: "export")
 	}
 }

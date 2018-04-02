@@ -1,6 +1,6 @@
 package br.ufscar.sead.loa.lidersim.remar
 
-class Anotacao {
+class Projeto {
     String informacao
     long ownerId
 
