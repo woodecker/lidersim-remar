@@ -1,0 +1,30 @@
+{
+  "name": "Lidersim",
+  "uri": "lidersim",
+  "type": "unity",
+  "version": 1,
+  "tasks": [
+    {
+      "name": "Anotações",
+      "uri": "anotacao",
+      "optional": true,
+      "description": "Escrever anotações para auxílio do aluno.",
+      "type": "json",
+      "dependencies": null,
+      "outputs": [
+        {
+          "name": "anotacoes.json",
+          "type": "json",
+          "path": ""
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    "desktop"
+  ],
+  "vars": {
+    "width": 1280,
+    "height": 720
+  }
+}
