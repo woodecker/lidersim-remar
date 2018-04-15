@@ -36,6 +36,11 @@
                                     <g:textArea name="informacao" required="" value="${projetoInstance?.informacao}"/>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <g:textField name="orcamento" required="" value="${projetoInstance?.orcamento}"/>
+                                </div>
+                            </div>
                         </div>
                  </fieldset>
             </form>
