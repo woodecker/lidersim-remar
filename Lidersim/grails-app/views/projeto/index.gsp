@@ -49,6 +49,7 @@
                                         </div>
                                     </th>
                                     <th id="titleLabel">Projeto <div class="row" style="margin-bottom: -10px;"><button  class="btn-floating" style="visibility: hidden"></button></div></th>
+                                    <th id="titleLabel">Orçamento <div class="row" style="margin-bottom: -10px;"><button  class="btn-floating" style="visibility: hidden"></button></div></th>
                                     <th>Ação <div class="row" style="margin-bottom: -10px;"><button  class="btn-floating" style="visibility: hidden"></button></div></th>
                                 </tr>
                                 </thead>
@@ -62,6 +63,7 @@
                                             <label for="checkbox-${projetoInstance.id}"></label>
                                         </td>
                                         <td>${fieldValue(bean: projetoInstance, field: "informacao")}</td>
+                                        <td>${fieldValue(bean: projetoInstance, field: "orcamento")}</td>
                                         <td> <i style="color: #5D4037 !important; margin-right:10px;" class="fa fa-pencil" onclick="_modal_edit($(this.closest('tr')))" ></i>
                                         </td>
                                     </tr>
@@ -93,7 +95,16 @@
                                             <div class="input-field col s12">
                                                 <textarea required id="editProjeto" class="materialize-textarea validate"
                                                           name="projeto" class="validate" length="1000" maxlength="1000"
-                                                          placeholder="Insira o Passo a Passo..."></textarea>
+                                                          placeholder="Descreva o projeto..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="content scaffold-create" role="main">
+                                        <div class="row">
+                                            <div class="input-field col s3">
+                                                <input type="text" id="editOrcamento" name="orcamento" value="">
                                             </div>
                                         </div>
                                     </div>
@@ -116,7 +127,16 @@
                                             <div class="input-field col s12">
                                                 <textarea required id="informacao" class="materialize-textarea"
                                                           name="informacao" class="validate" length="1000" maxlength="1000"
-                                                          placeholder="Insira o Passo a Passo..."></textarea>
+                                                          placeholder="Descreva o projeto..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="content scaffold-create" role="main">
+                                        <div class="row">
+                                            <div class="input-field col s3">
+                                                <input required type="text" id="orcamento" name="orcamento" class="validate" length="10" maxlength="10">
                                             </div>
                                         </div>
                                     </div>

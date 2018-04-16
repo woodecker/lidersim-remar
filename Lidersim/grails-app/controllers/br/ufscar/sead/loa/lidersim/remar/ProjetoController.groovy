@@ -76,8 +76,8 @@ class ProjetoController {
     @Transactional
     def update() {
         Projeto projetoInstance = Projeto.findById(Integer.parseInt(params.ProjetoID))
-        projetoInstance.informacao= params.projeto
-        projetoInstance.orcamento= params.orcamento
+        projetoInstance.informacao = params.projeto
+        projetoInstance.orcamento = Integer.parseInt(params.orcamento)
         projetoInstance.ownerId = session.user.id as long
         projetoInstance.save flush:true
 
@@ -116,7 +116,7 @@ class ProjetoController {
             render "null"
         }
         else{
-            render projetoInstance.informacao + "%@!" + projetoInstance.orcamento + "%@!" + projetoInstance.id
+            render projetoInstance.informacao + "%@!" + projetoInstance.id + "%@!" + projetoInstance.orcamento
         }
 
     }
@@ -168,7 +168,7 @@ void createJsonFile(String fileName, ArrayList<Projeto> projetoList) {
         // replace /n by ///n
         nota = nota.replace('\n', '\\\\n').replace("\r", "\\\\r")
         
-        bw.write("\t\"nota" + (i + 1) + "\": \"" + nota + projetoList[i].orcamento + "\" ")
+        bw.write("\t\"nota" + (i + 1) + "\": \"" + nota + ";" + projetoList[i].orcamento + "\" ")
             
         if (i < projetoList.size() - 1)
             bw.write(",")

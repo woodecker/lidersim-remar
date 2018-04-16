@@ -59,11 +59,13 @@ function _modal_edit(tr){
             data: data,
             url: url,
             success: function (returndata) {
-                var projetoInstance = returndata.split("%@!");
+                var projetoData = returndata.toString();
+                var projetoInstance = projetoData.split("%@!");
 
                 $("#editProjeto").val(projetoInstance[0]);
-
-                $("#ProjetoID").attr("value",projetoInstance[1]);
+                $("#ProjetoID").attr("value", projetoInstance[1]);
+                $("#editOrcamento").val(projetoInstance[2].toString());
+                
                 $("#editModal").openModal();
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
