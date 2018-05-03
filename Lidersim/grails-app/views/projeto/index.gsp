@@ -88,7 +88,7 @@
                     <div id="editModal" class="modal remar-modal">
                         <g:form name="edit-projeto" method="PUT" url="[resource:projetoInstance, action:'update']">
                             <div class="modal-content">
-                                <h4>Edição de Projeto</h4>
+                                <h4>Descrição do Projeto</h4>
                                 <div class="row">
                                     <div class="content scaffold-create" role="main">
                                         <div class="row">
@@ -100,6 +100,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <h4>Orçamento</h4>
                                 <div class="row">
                                     <div class="content scaffold-create" role="main">
                                         <div class="row">
